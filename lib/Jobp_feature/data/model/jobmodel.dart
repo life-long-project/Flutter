@@ -16,24 +16,24 @@ class JobsModel extends Jobs {
       required super.jobImgUrl,
       required super.createdAt,
       required super.updatedAt,
-      required super.iV});
+      required super.iV, });
   
   factory JobsModel.fromjson(Map<String, dynamic> json) => JobsModel(
-     sId : json['_id'],
-    postedById : json['posted_by_id'],
-    jobName : json['job_name'],
-    jobDescription : json['job_description'],
-    jobSkills : json['job_skills'].cast<String>(),
-    jobType : json['job_type'],
-    jobLocation : json['job_location'],
-    isActive : json['is_active'],
-    isHidden : json['is_hidden'],
-    salary : json['salary'],
-    jobDuration : json['job_duration'],
-    jobImgUrl : json['job_img_url'],
-    createdAt : json['createdAt'],
-    updatedAt : json['updatedAt'],
-    iV : json['__v']
+     sId : json['_id']??'',
+    postedById : json['posted_by_id']??'',
+    jobName : json['job_name']??'',
+    jobDescription : json['job_description']??'',
+    jobSkills : json['job_skills'].cast<String>()??'',
+    jobType : json['job_type']??'',
+    jobLocation : json['job_location']??'',
+    isActive : json['is_active']??'',
+    isHidden : json['is_hidden']??'',
+    salary : json['salary']??'',
+    jobDuration : json['job_duration']??'',
+    jobImgUrl : json['job_img_url']??'',
+    createdAt : json['createdAt']??'',
+    updatedAt : json['updatedAt']??'',
+    iV : json['__v']??'', 
 
 
   );

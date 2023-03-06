@@ -10,4 +10,8 @@ abstract class JobsState extends Equatable {
 class JobsInitial extends JobsState {}
 class JobsLoading extends JobsState {}
 class JobsSuccess extends JobsState {}
-class JobsFail extends JobsState {}
+class JobsFail extends JobsState {
+  final String message;
+
+ const JobsFail(this.message);
+}
